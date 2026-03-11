@@ -1,0 +1,47 @@
+// Classe Player
+class Player(val name: String, val surName: String) {
+    var totalScore: Int = 0
+    var personalBestScore: Int = 0
+
+    fun fullName(): String {
+        return name + " " + surName
+    }
+}
+
+// Classe Scores
+class Scores {
+    fun updateBest(best: Int, current: Int): Int {
+        if (current > best) {
+            return current
+        }
+        return best
+    }
+}
+
+fun main() {
+    val p1 = Player("chaymae", "Tesla")
+    val p2 = Player("asmae", "Edison")
+
+    val scoring = Scores()
+
+    // --- Scores de p1 : 20, 35, 25 ---
+    val levelsP1 = listOf(20, 35, 25)
+    for (score in levelsP1) {
+        p1.totalScore += score
+        p1.personalBestScore = scoring.updateBest(p1.personalBestScore, score)
+    }
+
+    // --- Scores de p2 : 15, 30, 10 ---
+    val levelsP2 = listOf(15, 30, 10)
+    for (score in levelsP2) {
+        p2.totalScore += score
+        p2.personalBestScore = scoring.updateBest(p2.personalBestScore, score)
+    }
+
+    // --- Déterminer le gagnant ---
+    val winner: Player = if (p1.totalScore >= p2.totalScore) p1 else p2
+
+    // --- Résultat final ---
+    println("Winner ${winner.fullName()} with a combined score of ${winner.totalScore}")
+    println("Personal Best Score is = ${winner.personalBestScore}")
+}
