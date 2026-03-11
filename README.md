@@ -23,7 +23,9 @@ Tâche 7 : Comparer les scores totaux et déterminer le gagnant.
 Tâche 8 : Afficher le résultat final (2 lignes).
 
 ![kotlin-lab6](https://github.com/user-attachments/assets/91b3f3c2-e0c7-453f-be8d-d2442e623242)
-Extension (optionnelle) : Remplacer les scores codés en dur par une liste et une boucle for.
+Extension  : Remplacer les scores codés en dur par une liste et une boucle for.
+![kotlin-lab6](https://github.com/user-attachments/assets/2292118f-5371-4ac8-b69d-461de8ed7f42)
+
 
 ##  Utilisation
 Ouvrir Kotlin Playground.
